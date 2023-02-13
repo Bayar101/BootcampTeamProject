@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: #ea8d47;
+}
+body{
+    width: 100%;
+    height: auto;
+    background-color: #d36cff;
+    position: relative;
+}
+.shader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.6;
+    z-index: -99;
+}
+/* shopping heseg ///////////////////////////////////////////////////////////////////////////*/
+.container{
+    width: 100%;
+    height: auto;
+}
+/* header heseg ///////////////////////////////////////////////////////////////////////////*/
+.header{
+    width: 100%;
+    height: auto;
+    padding: 10px 100px;
+    box-shadow: 0px 0 10px  #ea8d47;
+}
+.h-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+/* menu left */
+.h-menu{
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 8%;
+    height: 100%;
+    cursor: pointer;
+}
+.logo video{
+    width: auto;
+    height: 100%;
+    border: 0;
+}
+.menu{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    font-size: 3rem;
+}
+.menu a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .7em;
+    letter-spacing: 4px;
+    position: relative;
+}
+.menu a::before{
+    content: "..-. .- ... .... .. --- -.";
+    font-size: 0.7rem;
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    background-color: #ea8d47;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    scale: 0.01;
+    transition: scale 0.5s;
+}
+.menu a:hover::before{
+    scale: 1;
+    transform-origin: left;
+}
+.menu a::after{
+    content: " . . ";
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    top: 0;
+    left: 0;
+    transform-origin: right;
+    scale: 0.01;
+    transition: scale 1s;
+}
+.menu a:hover::after{
+    scale: 1;
+    transform: translate(100px, -100px);
+    transform-origin: left;
+}
+.menu a:hover{
+    box-shadow: 0 0 1px white;
+}
+/* menu right */
+.h-icons{
+    width: 10%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h-icons img{
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+}
+
+.h-icons img:first-child{
+    width: auto;
+    height: 60%;
+}
+
+/* MAIN BODY ////////////////////////////////////// */
+.main-body{
+    width: 100%;
+    height: 60vh;
+    padding: 30px 100px;
+    padding-top: 60px;
+    background-color: #160014;
+    border:1px solid #ea8d47;
+    border-radius: 60px;
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+
+}
+.container1{
+    position: relative;
+    width: 14rem;
+    height: 14rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transform: scale(1.5);
+}
+.container2{
+    position: relative;
+    width: 14rem;
+    height: 14rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transform: scale(1.5);
+}
+.container3{
+    position: relative;
+    width: 14rem;
+    height: 14rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transform: scale(1.5);
+}
+
+
+.container4{
+    position: relative;
+    width: 14rem;
+    height: 14rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transform: scale(1.5);  
+}
+
+.a{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+    background-image: linear-gradient(#ea8d47,#d36cff);
+    /* background-image: linear-gradient(  #5ddcff, #3c67e3, #4e00c2); */
+    animation: ogtorgui 1s linear infinite;
+    
+    cursor: pointer;
+
+}
+.a1{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 70%;
+    height: 70%;
+    cursor: pointer;
+    animation: zurag 1s linear infinite;
+}
+@keyframes zurag{
+    0%{
+        transform: scale(1)  ;
+    }
+
+    100%{
+        transform: scale(1.05) ;
+    }
+}
+.a1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+@keyframes ogtorgui{
+    0%{
+        transform: rotate(0) scale(1)  ;
+    }
+
+    100%{
+        transform:rotate(360deg) scale(1.05) ;
+    }
+}
+.b{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 5px;
+    cursor: pointer;
+    display: none;
+    animation: hh 3s;
+    align-items: center;
+    perspective-origin: 77px 100px ;
+    text-align: center;
+    
+  }
+  .goy-ug{
+    font-size: 1.2rem;
+    margin-top: 150px;
+    color: #ea8d47;
+
+  }
+  
+  .cube{
+
+    position: relative;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animate 5s linear infinite;
+    margin-bottom: 160px;
+  }
+  @keyframes animate{
+  to{
+    transform: rotateY(360deg);
+  }
+  }
+
+  .left , .right , .front , .back{
+    height: 22em;
+    width: 22em;
+    background: aqua;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    
+  }
+  .left img , .right img, .front img, .back img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .front{
+    transform: translateZ(12em);
+  }
+  
+  .back{
+    transform: translateZ(-12em);
+  }
+  
+  .right{
+    transform: translateX(12em) rotateY(90deg);
+  }
+  .left{
+    transform: translateX(-12em) rotateY(90deg);
+  }
+  
+@keyframes hh{
+    from{
+        transform: scale(0.1)
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.show{
+    display: flex;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* ENDEES DOOSHOO BITGII YAVARAI */
+
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* FOOTER //////////////////////////////////////////////////////// */
+.footer{
+    width: 100%;
+    height: auto;
+    gap: 20px;
+}
+.slider{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(19, 160px);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    gap: 20px;
+}
+.f-box{
+    width: 100%;
+    height: 360px;
+    rotate: -30deg;
+    padding: 10px 10px;
+    display: grid;
+    grid-template-rows: repeat(3, 90px);  
+    gap: 20px;
+    animation: f-slider 30s linear infinite;
+}
+.f-box img{
+    height: 100px;
+    width: 80px;
+    margin: 0 auto;
+    border: 1px solid #ea8d47;
+    border-radius: 20px;
+    background-image: linear-gradient(#ea8d47, #d36cff);
+}
+
+@keyframes f-slider{
+    0%{
+        transform: translate(0, 0);
+    }
+    50%{
+        transform: translate(-810.6666%, -205%);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+    
+}
+
+.f-content{
+    width: 90%;
+    height: auto;
+    padding: 0 100px;
+    /* background-color: #160014; */
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: auto;
+}
+.logo-f{
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+}
+.logo-f video{
+    width: auto;
+    height: 200px;
+    margin-right: 50px;
+}
+.iconsF{
+    width: 100%;
+    display: none;
+}
+.icons a{
+    margin-left: 30px;
+    display: flex;
+    text-decoration: none;
+    gap: 30px;
+    font-size: 1em;
+}
+.icons img{
+    width: 30px;
+    height: 30px;
+}
+.socials{
+    width: 180px;
+    height: auto;
+    transform: skewX(-10deg);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: blinking 1.5s infinite;
+    cursor: pointer;
+    position: relative;
+}
+.socials::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 0.1px;
+    top: -10px;
+    left: -20px;
+    transform: rotate(45deg);
+    animation: blinking 1.5s infinite;
+}
+.socials::after{
+    font-size: 0.5em;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 0.1px;
+    bottom: -10px;
+    left: -20px;
+    transform: rotate(-45deg);
+    animation: blinking 1.5s infinite;
+}
+
+@keyframes blinking{
+    0%{
+        border: 1px solid #ea8d47;
+    }
+    100%{
+        border: none;
+    }
+}
+
+
+
+.company-details{
+    width: 25%;
+    height: 100px;
+    font-size: 0.7em;
+}
+.detail{
+    display: flex;
+    justify-content: space-between;
+}
+.detail p:nth-child(odd){
+    text-transform: uppercase;
+}
+.copy-right{
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    font-size: 0.5em;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrow{
+    font-size: 1em;
+    margin-left: 50px;
+    display: none;
+    cursor: pointer;
+}
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.show1{
+    display: flex;
+}
+.clickable{
+    pointer-events: none;
+}

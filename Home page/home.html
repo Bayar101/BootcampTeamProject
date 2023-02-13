@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/icon.png">
+    <link rel="stylesheet" href="/Home page/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Home</title>
+    <style>
+        css-doodle {
+          --color: @p(#51eaea, #fffde1, #ff9d76, #FB3569);
+          --rule: (
+            :doodle {
+              @grid: 30x1 / 18vmin;
+              --deg: @p(-180deg, 180deg);
+            }
+            :container {
+              perspective: 30vmin;
+            }
+            :after, :before {
+              content: '';
+              background: var(--color); 
+              @place-cell: @r(100%) @r(100%);
+              @size: @r(6px);
+              @shape: heart;
+            }
+          
+            @place-cell: center;
+            @size: 100%;
+          
+            box-shadow: @m2(0 0 50px var(--color));
+            background: @m100(
+              radial-gradient(var(--color) 50%, transparent 0) 
+              @r(-20%, 120%) @r(-20%, 100%) / 1px 1px
+              no-repeat
+            );
+          
+            will-change: transform, opacity;
+            animation: scale-up 12s linear infinite;
+            animation-delay: calc(-12s / @I * @i);
+      
+            @keyframes scale-up {
+              0%, 95.01%, 100% {
+                transform: translateZ(0) rotate(0);
+                opacity: 0;
+              }
+              10% { 
+                opacity: 1; 
+              }
+              95% {
+                transform: 
+                  translateZ(35vmin) rotateZ(@var(--deg));
+              }
+            }
+          )
+        }
+      </style>
+      
+</head>
+<body>
+    <div class="shader"></div>
+    <!-- shopping heseg -->
+    <div class="container">
+        <div class="header">
+            <div class="h-container">
+                <div class="h-menu">
+                    <div class="logo">
+                        <video loop autoplay src="/images/logo.mp4" id="logo">Your browser does not support the video tag</video>
+                    </div>
+                    <div class="menu">
+                        <a href="/Home page/home.html">home</a>
+                        <a href="/Home page/Brands page/brands.html">brands</a>
+                        <a href="./sinple-page1/single-page1.html">metalooks</a>
+                        <a href="/Home page/About us/abouUs.html">about us</a>
+                    </div>
+                </div>
+                <div class="h-icons">
+                    <img src="/images/message.png">
+                    <img src="/images/avatar-white.png">
+                </div>
+            </div>
+        </div>
+<!-- MAIN BODY -->
+        <div class="main-body">
+            <div class="shader-animation"></div>
+            <div class="banner">
+                <div class="startbtn" id="startAnimation">
+                    click here!
+                </div>
+                <css-doodle class="css-doodle" use="var(--rule)"></css-doodle>
+                <div class="brann-text">
+                    <p>What is digital design?
+                        It is a fashion illustration created using computer technology software. The digital fashion market has been developing since 2010.
+                        Significance:
+                    </p>
+                    <p>
+                        Humans generate 2.12 billion tons of waste every year. Then 92 million tons of it are waste clothes. This number is expected to grow to 134 million in 2030, according to a research team at the University of Manchester.
+                        Therefore, our team has completed the digital fashion site with the aim of introducing it to Mongolia. It has also been completed for the target group of citizens and the general public who cannot buy material things without leaving their homes.
+                        Website Introduction:
+                        </p>
+                </div>
+                <div class="banner-img">
+                    <img src="/images/digital-fashion.png" alt="">
+                </div>
+                
+            </div>
+            <div class="brands">
+                <div class="brand-names">
+                    <div class="name-box" id="brandName1"><p>Fabricant</p></div>
+                    <div class="name-box" id="brandName2"><p>MASTERKEY</p></div>
+                    <div class="name-box" id="brandName3"><p>IT'S ALIVE</p></div>
+                    <div class="name-box" id="brandName4"><p>DressX</p></div>
+                </div>
+                <div class="brand-banner">
+                    <div class="banner-box" id="banner-box1">
+                        <video loop autoplay muted src="/images/35c618d7-0cd7e602.mp4"></video>
+                        <p>The Fabricant</p>
+                    </div>
+                    <div class="banner-box" id="banner-box2">
+                        <video loop autoplay muted src="https://masterkey.com.tr/wp-content/uploads/2021/01/Untitled-Project-1.mp4"></video>
+                        <p>MASTERKEY</p>
+                    </div>
+                    <div class="banner-box" id="banner-box3">
+                        <video loop autoplay muted src="https://itsalive.studio/wp-content/uploads/2022/04/7.mp4"></video>
+                        <p>It's Alive</p>
+                    </div>
+                    <div class="banner-box" id="banner-box4">
+                        <video loop autoplay muted src="https://storage.googleapis.com/nft-dressx-static/creations/2a567967-0060-4b3d-b8ac-8a4437a122e0/Exoskin_II_-_BladeRunway_Artwork_Loop.mp4?Expires=1675922152&GoogleAccessId=test-app%40dress-x-project.iam.gserviceaccount.com&Signature=SUiUFMdmKZsqGXAzbjLqpqI%2B5wkOvR0NnqpfN0t6hJtTSU87ty9G9QJ%2Fhsoo0lG57RS5YmWSgLWCYq5i4pMN0llpkUT32kKOsysiAzHyGZzvetFN1yoQgQm7K5lNlzPQKP7eRR79nJK8hfByWt644s69SJ%2B%2BMj584JO8dMLVUqLpEUJ2IGqd%2FyY197TwVMxAuvX0PHVXjzTSdeYCSJi6sYNntui3a2Eywc2%2FKwRCwhMNjMYs9y9bkxTQi7ALFba7Vjsxzg8BesrrstfTNlVsub7ymBwbPCi3o3w5%2BPpzjVCDT1t0%2BIcKevtryP0W9O3Oj50b7Ve8YQNZyTepgPey4w%3D%3D"></video>
+                        <p>DRESSX</p>
+                    </div>
+                    
+    
+                </div>
+            </div>
+            <div class="creators">
+                <div class="creators-grid">
+                    <div class="creator-box">
+                        <div class="profile-picture">
+                            <img src="https://tf-web-assets.imgix.net/creators/wow-avatar.png?auto=format&q=70&w=650&dpr=1" alt="">
+                        </div>
+                        <div class="profile-text">
+                            <h1>World of Women</h1>
+                            <h4>garmentcreator</h4>
+                            <p>A community celebrating representation, inclusivity, and equal opportunities for all. United by a first-of-its-kind collection, featuring 10,000 artworks of diverse and powerful women.</p>
+                        </div>
+                        <a href="https://www.thefabricant.com/creator/0x80c7bd8ef2dd1aa7" target="_blank"><div class="profile-btn">See Profile</div></a>
+                    </div>
+                    <div class="creator-box">
+                        <div class="profile-picture">
+                            <img src="https://tf-web-assets.imgix.net/creators/anna-dart-avatar.jpg?auto=format&q=70&w=300&dpr=1" alt="">
+                        </div>
+                        <div class="profile-text">
+                            <h1>Anna Dart</h1>
+                            <h4>Material Creator</h4>
+                            <p>Anna Dart is an awarded multidisciplinary artist who bridges traditional art and the Metaverse and promotes cultural, ecological, and social sustainability at the intersection of new technology. Co-founder at Exquisite Workers. Gaudí´s Ambassador. Mentor at the 0x Society Academy.</p>
+                        </div>
+                        <a href="https://www.thefabricant.com/creator/0x72f1498c04e6eaff" target="_blank"><div class="profile-btn">See Profile</div></a>
+                    </div>
+                    <div class="creator-box">
+                        <div class="profile-picture">
+                            <img src="https://tf-web-assets.imgix.net/creators/stephy-fung-avatar.jpg?auto=format&q=70&w=300&dpr=1" alt="">
+                        </div>
+                        <div class="profile-text">
+                            <h1>Stephy Fung</h1>
+                                <h4>Garment Creator</h4>
+                                <p>Stephy Fung is a 3D digital fashion artist based in London. Her work frames vibrant colours and balanced composition, paying homage to her Chinese heritage and to also educate her audiences on the culture. Her designs have been a way to explore and express her British Chinese identity and she hopes to fuse modern techniques/cuts with traditional Chinese elements. </p>
+                        </div>
+                        <a href="https://www.thefabricant.com/creator/0xcbe3be335d94d962" target="_blank"><div class="profile-btn">See Profile</div></a>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            
+
+
+
+        </div>
+<!--  ENEENEES DOOSHOO YAVAHGU SHUU-->
+        <div class="footer">
+            <div class="slider" id="f-slider">
+                <!-- 1 -->
+                <div class="f-box">
+                    <img src="/">
+                    <img src="/images/footer/2.png">
+                    <img src="/images/footer/3.png">
+                </div>
+                <!-- 2 -->
+                <div class="f-box">
+                    <img src="/images/footer/4.png">
+                    <img src="/images/footer/5.png">
+                    <img src="/images/footer/6.png">
+                </div>
+                <!-- 3 -->
+                <div class="f-box">
+                    <img src="/images/footer/7.png">
+                    <img src="/images/footer/8.png">
+                    <img src="/images/footer/9.png">
+                </div>
+                <!-- 4 -->
+                <div class="f-box">
+                    <img src="/images/footer/10.png">
+                    <img src="/images/footer/11.png">
+                    <img src="/images/footer/12.png">
+                </div>
+                <!-- 5 -->
+                <div class="f-box">
+                    <img src="/images/footer/13.png">
+                    <img src="/images/footer/14.png">
+                    <img src="/images/footer/15.png">
+                </div>
+                <!-- 6 -->
+                <div class="f-box">
+                    <img src="/images/footer/16.png">
+                    <img src="/images/footer/17.png">
+                    <img src="/images/footer/18.png">
+                </div>
+                <!-- 7 -->
+                <div class="f-box">
+                    <img src="/images/footer/19.png">
+                    <img src="/images/footer/20.png">
+                    <img src="/images/footer/21.png">
+                </div>
+                <!-- 8 -->
+                <div class="f-box">
+                    <img src="/images/footer/22.png">
+                    <img src="/images/footer/23.png">
+                    <img src="/images/footer/24.png">
+                </div>
+                <!-- 9 -->
+                <div class="f-box">
+                    <img src="/images/footer/25.png">
+                    <img src="/images/footer/26.png">
+                    <img src="/images/footer/27.png">
+                </div>
+                <!-- 10 -->
+                <div class="f-box">
+                    <img src="/images/footer/28.png">
+                    <img src="/images/footer/29.png">
+                    <img src="/images/footer/30.png">
+                </div>
+                <!-- 11 -->
+                <div class="f-box">
+                    <img src="/images/footer/31.png">
+                    <img src="/images/footer/32.png">
+                    <img src="/images/footer/33.png">
+                </div>
+                <!-- 12 -->
+                <div class="f-box">
+                    <img src="/images/footer/34.png">
+                    <img src="/images/footer/35.png">
+                    <img src="/images/footer/36.png">
+                </div>
+                <!-- 13 -->
+                <div class="f-box">
+                    <img src="/images/footer/37.png">
+                    <img src="/images/footer/1.png">
+                    <img src="/images/footer/2.png">
+                </div>
+                <!-- 14 -->
+                <div class="f-box">
+                    <img src="/images/footer/3.png">
+                    <img src="/images/footer/4.png">
+                    <img src="/images/footer/5.png">
+                </div>
+                <!-- 15 -->
+                <div class="f-box">
+                    <img src="/images/footer/6.png">
+                    <img src="/images/footer/7.png">
+                    <img src="/images/footer/8.png">
+                </div>
+                <!-- 16 -->
+                <div class="f-box">
+                    <img src="/images/footer/9.png">
+                    <img src="/images/footer/10.png">
+                    <img src="/images/footer/11.png">
+                </div>
+                <!-- 17 -->
+                <div class="f-box">
+                    <img src="/images/footer/12.png">
+                    <img src="/images/footer/13.png">
+                    <img src="/images/footer/14.png">
+                </div>
+                <!-- 18 -->
+                <div class="f-box">
+                    <img src="/images/footer/15.png">
+                    <img src="/images/footer/16.png">
+                    <img src="/images/footer/17.png">
+                </div>
+                <!-- 19 -->
+                <div class="f-box">
+                    <img src="/images/footer/18.png">
+                    <img src="/images/footer/19.png">
+                    <img src="/images/footer/20.png">
+                </div>
+                
+            </div>
+            <div class="f-content">
+                <div class="logo-f">
+                    <video loop autoplay src="/images/logo.mp4" id="logo-f">Your browser does not support the video tag</video>
+                    <div class="iconsF" id="iconsF">
+                        <div class="icons">
+                            <a href="https://twitter.com/" target="_blank"><img src="/images/icons/twitter.png"><p>PSIFIAKO_</p></a>
+                        </div>
+                        <div class="icons">
+                            <a href="https://www.instagram.com/" target="_blank"><img src="/images/icons/instagram.png"><p>@psifiako</p></a>
+                        </div>
+                        
+                    </div>
+                    <div class="arrow" id="arrow">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div class="socials" id="socials">
+                        <p>click for here social</p>
+                    </div>
+                </div>
+                
+                <div class="company-details">
+                    <div class="detail">
+                        <p>address</p>
+                        <p>Ulaanbaatar, Mongolia</p>
+                    </div>
+                    <div class="detail">
+                        <p>phone</p>
+                        <p>+976 99000000</p>
+                    </div>
+                    <div class="detail">
+                        <p>email</p>
+                        <p>example@gmail.com</p>
+                    </div>
+                    
+                </div> 
+                <div class="copy-right">
+                    <i class="fa-solid fa-copyright"></i>
+                    <p>2023. PSIFIAKO</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- social media heseg -->
+    <div class="social-media"></div>
+    <script src="/Home page/home.js"></script>
+    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
+   
+</body>
+</html>

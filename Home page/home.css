@@ -111,16 +111,18 @@ body{
 }
 /* menu right */
 .h-icons{
-    width: 10%;
+    width: 7%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.h-icons img{
+.h-icons a{
     width: auto;
-    height: 80px;
+    height: 100%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .h-icons img:first-child{
